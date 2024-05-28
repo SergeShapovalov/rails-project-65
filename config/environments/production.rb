@@ -94,11 +94,4 @@ Rails.application.configure do
   # ]
   # Skip DNS rebinding protection for the default health check endpoint.
   # config.host_authorization = { exclude: ->(request) { request.path == "/up" } }
-
-  config.after_initialize do
-    Raven.configure do |config|
-      config.dsn = 'https://62791df4a519282e1a3727c05b840650@o4507333833195520.ingest.de.sentry.io/4507333835620432'
-      config.breadcrumbs_logger = [:active_support_logger, :http_logger]
-    end
-  end
 end
