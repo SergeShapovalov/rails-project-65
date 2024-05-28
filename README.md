@@ -30,8 +30,7 @@ The project is implemented using the following technologies:
 1. Start the project with `bin/rails s` command
 
 ## Build
-The build is deployed to:
-
+The build is deployed to: [link](https://callboard-zrzl.onrender.com/)
 
 ## Roadmap
 - Pass the review and finalize the training project
