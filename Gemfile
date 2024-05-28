@@ -74,8 +74,5 @@ group :test do
 end
 
 group :production do
-  gem 'stackprof'
-  gem 'sentry-ruby'
-  gem 'sentry-rails'
   gem 'pg'
 end
