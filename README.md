@@ -1,7 +1,8 @@
 # README
 
 ### Hexlet tests and linter status:
-[![Actions Status](https://github.com/SergeShapovalov/rails-project-65/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/SergeShapovalov/rails-project-65/actions)
+[![Hexlet action status](https://github.com/SergeShapovalov/rails-project-65/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/SergeShapovalov/rails-project-65/actions)
+[![Github action status](https://github.com/SergeShapovalov/rails-project-65/actions/workflows/main.yml/badge.svg)](https://github.com/SergeShapovalov/rails-project-65/actions/workflows/main.yml)
 
 # Training Project "Callboard"
 
