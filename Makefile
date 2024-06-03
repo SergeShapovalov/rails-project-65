@@ -16,4 +16,7 @@ lint:
 slim-lint:
 	slim-lint app/views/
 
+run:
+	bundle exec rails s
+
 .PHONY: test
