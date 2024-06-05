@@ -52,6 +52,8 @@ gem 'slim'
 gem 'slim-rails'
 gem 'slim_lint'
 
+gem 'faker'
+
 gem 'bcrypt'
 gem 'omniauth-github'
 gem 'omniauth-rails_csrf_protection'

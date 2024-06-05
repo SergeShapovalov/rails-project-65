@@ -3,6 +3,7 @@ setup: install
 install:
 	bundle install
 	yarn install
+	cp -n .env.example .env
 	bundle exec rails db:create
 	bundle exec rails db:migrate
 	bundle exec rails assets:precompile
@@ -18,5 +19,6 @@ slim-lint:
 
 run:
 	bundle exec rails s
+
 
 .PHONY: test
