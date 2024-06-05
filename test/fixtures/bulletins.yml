@@ -4,8 +4,10 @@ one:
   title: MyString
   content: MyText
   user: one
+  category: one
 
 two:
   title: MyString
   content: MyText
   user: two
+  category: two
