@@ -3,7 +3,7 @@ setup: install
 install:
 	bundle install
 	yarn install
-	cp -n .env.example .env
+	cp -n .env.example .env || true
 	bundle exec rails db:create
 	bundle exec rails db:migrate
 	bundle exec rails assets:precompile
