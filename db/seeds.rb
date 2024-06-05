@@ -17,12 +17,11 @@ end
   User.create!(name: Faker::Name.name, email: Faker::Internet.unique.email)
 end
 
+users = User.all
+categories = Category.all
 images = (1..5).to_a.map do |number|
   Rails.root.join("test/fixtures/files/food_#{number}.jpg").open
 end
-
-users = User.all
-categories = Category.all
 
 30.times do
   bulletin = Bulletin.build(
