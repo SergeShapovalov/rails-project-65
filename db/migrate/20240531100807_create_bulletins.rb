@@ -1,6 +1,6 @@
-class CreateAnnouncements < ActiveRecord::Migration[7.1]
+class CreateBulletins < ActiveRecord::Migration[7.1]
   def change
-    create_table :announcements do |t|
+    create_table :bulletins do |t|
       t.string :title
       t.text :content
       t.references :user, null: false, foreign_key: true
