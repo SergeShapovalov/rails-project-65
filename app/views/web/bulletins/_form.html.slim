@@ -1,0 +1,14 @@
+= simple_form_for bulletin do |f|
+  = f.input :title,
+          input_html: { class: 'input-group mb-3 form-control' }
+  = f.input :description,
+          input_html: { class: 'input-group mb-3 form-control' }
+  = f.association :category,
+          collection: Category.all,
+          required: true,
+          input_html: { class: 'input-group mb-3 form-control' }
+  = f.input :image,
+          required: true,
+          input_html: { class: 'input-group mb-3 form-control' }
+  = f.button :submit,
+          class: 'btn-primary flex-grow-2 me-2'
