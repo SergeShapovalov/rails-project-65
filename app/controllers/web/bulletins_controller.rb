@@ -19,8 +19,7 @@ module Web
       if @bulletin.save
         redirect_to bulletin_path @bulletin, notice: t('.success')
       else
-        flash.now[:failure] = t('.failed')
-        render :new
+        redirect_to new_bulletin_path, notice: t('.failed')
       end
     end
 
