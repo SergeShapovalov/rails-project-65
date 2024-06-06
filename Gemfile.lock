@@ -126,6 +126,8 @@ GEM
     ffi (1.17.0-x86-linux-gnu)
     ffi (1.17.0-x86_64-darwin)
     ffi (1.17.0-x86_64-linux-gnu)
+    flash_rails_messages (2.3.0)
+      rails (>= 5.2)
     globalid (1.2.1)
       activesupport (>= 6.1)
     hashie (5.0.0)
@@ -370,6 +372,7 @@ DEPENDENCIES
   debug
   dotenv-rails
   faker
+  flash_rails_messages
   image_processing (~> 1.2)
   jbuilder
   jsbundling-rails

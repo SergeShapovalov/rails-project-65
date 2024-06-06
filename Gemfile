@@ -53,6 +53,7 @@ gem 'simple_form'
 gem 'slim'
 gem 'slim-rails'
 gem 'slim_lint'
+gem 'flash_rails_messages'
 
 gem 'faker'
 
