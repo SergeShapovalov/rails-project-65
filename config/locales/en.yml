@@ -28,4 +28,23 @@
 #       enabled: "ON"
 
 en:
-  hello: "Hello world"
+  layouts:
+    application:
+      title: Callboard
+    header:
+      title: Callboard
+      home: Home
+      sign_in: Sign In
+  web:
+    bulletins:
+      index:
+        bulletins: Bulletins
+      new:
+        add_bulletin: Add bulletin
+      create:
+        success: Successfully created bulletin
+        failed: Failed to create bulletin
+    auth:
+      callback:
+        success: Successfully signed in
+        failed: Failed to sign in

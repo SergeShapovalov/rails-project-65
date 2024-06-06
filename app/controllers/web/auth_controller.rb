@@ -9,9 +9,9 @@ module Web
 
       if user.save
         sign_in(user.id)
-        flash[:success] = 'Successfully signed in'
+        flash[:success] = t('.success')
       else
-        flash[:failure] = 'Failed to sign in'
+        flash[:failure] = t('.failed')
       end
 
       redirect_to root_path

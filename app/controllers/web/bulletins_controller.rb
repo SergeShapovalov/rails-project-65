@@ -16,9 +16,9 @@ module Web
       @bulletin = current_user.bulletins.build(bulletin_params)
 
       if @bulletin.save
-        redirect_to bulletin_path @bulletin, notice: 'Successfully created bulletin.'
+        redirect_to bulletin_path @bulletin, notice: t('.success')
       else
-        flash.now[:failure] = 'Failed to create bulletin.'
+        flash.now[:failure] = t('.failed')
         render :new
       end
     end

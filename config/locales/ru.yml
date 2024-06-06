@@ -1,0 +1,21 @@
+ru:
+  layouts:
+    application:
+      title: Доска объявлений
+    header:
+      title: Доска объявлений
+      home: Главная
+      sign_in: Войти
+  web:
+    bulletins:
+      index:
+        bulletins: Объявления
+      new:
+        add_bulletin: Добавить объявление
+      create:
+        success: Объявление было создано
+        failed: Ошибка создания объявления
+    auth:
+      callback:
+        success: Успешно
+        failed: Ошибка аутентификации

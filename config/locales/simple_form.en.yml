@@ -1,5 +1,11 @@
 en:
   simple_form:
+    labels:
+      bulletin:
+        title: Title
+        description: Description
+        category: Category
+        image: Image
     "yes": 'Yes'
     "no": 'No'
     required:
