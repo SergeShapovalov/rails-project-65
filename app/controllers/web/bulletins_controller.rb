@@ -13,7 +13,8 @@ module Web
     end
 
     def create
-      @bulletin = current_user.bulletins.build(bulletin_params)
+      @bulletin = Bulletin.build(bulletin_params)
+      @bulletin.user_id = session[:user_id]
 
       if @bulletin.save
         redirect_to bulletin_path @bulletin, notice: t('.success')

@@ -15,7 +15,7 @@
     ul.nav.nav-pills
       - if authorized?
         li.nav-item.me-2
-          = link_to sign_out_path, data: { turbo_method: :delete }, class: 'nav-link text-dark' do
+          = link_to sign_out_path, data: { turbo_method: :post }, class: 'nav-link text-dark' do
             = t('.sign_out')
       - else
         li.nav-item.me-2
