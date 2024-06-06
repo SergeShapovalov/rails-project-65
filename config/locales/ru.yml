@@ -6,6 +6,8 @@ ru:
       title: Доска объявлений
       home: Главная
       sign_in: Войти
+      sign_out: Выйти
+      add_bulletin: Добавить
   web:
     bulletins:
       index:
@@ -19,3 +21,6 @@ ru:
       callback:
         success: Успешно
         failed: Ошибка аутентификации
+      sign_out:
+        success: Успешно
+        failed: Ошибка деаутентификации

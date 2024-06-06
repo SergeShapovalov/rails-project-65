@@ -17,6 +17,12 @@ module Web
       redirect_to root_path
     end
 
+    def sign_out()
+      session.delete(:user_id)
+      session.clear
+      redirect_to root_path, notice: t('.success')
+    end
+
     private
 
     def sign_in(user_id)

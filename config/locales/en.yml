@@ -35,6 +35,8 @@ en:
       title: Callboard
       home: Home
       sign_in: Sign In
+      sign_out: Sign Out
+      add_bulletin: Add Bulletin
   web:
     bulletins:
       index:
@@ -48,3 +50,6 @@ en:
       callback:
         success: Successfully signed in
         failed: Failed to sign in
+      sign_out:
+        success: Successfully signed out
+        failed: Failed to sign out
