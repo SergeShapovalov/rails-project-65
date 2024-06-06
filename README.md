@@ -27,7 +27,7 @@ The project is implemented using the following technologies:
 2. Install necessary dependencies using `make setup`
 
 ## Running
-1. Start the project with `bin/rails s` command
+1. Start the project with `make run` command
 
 ## Build
 The build is deployed to: [link](https://callboard-zrzl.onrender.com/)
