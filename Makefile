@@ -20,5 +20,4 @@ slim-lint:
 run:
 	bundle exec rails s
 
-
 .PHONY: test
