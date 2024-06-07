@@ -14,6 +14,10 @@
                 = t('.add_bulletin')
     ul.nav.nav-pills
       - if authorized?
+        - if is_admin?
+          li.nav-item.me-2
+            = link_to admin_root_path, class: 'nav-link text-dark' do
+              = t('.admin')
         li.nav-item.me-2
           = link_to sign_out_path, data: { turbo_method: :post }, class: 'nav-link text-dark' do
             = t('.sign_out')

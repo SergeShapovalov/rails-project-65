@@ -36,6 +36,7 @@ en:
       home: Home
       sign_in: Sign In
       sign_out: Sign Out
+      admin: Admin
       add_bulletin: Add Bulletin
   web:
     bulletins:
@@ -53,3 +54,9 @@ en:
       sign_out:
         success: Successfully signed out
         failed: Failed to sign out
+    admin:
+      admin:
+        index:
+          title: Bulletins on mederation
+          name: Name
+          created: Created date

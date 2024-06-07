@@ -4,8 +4,10 @@ one:
   name: MyString
   email: user_one@gmail.com
   password_digest: MyString
+  admin: true
 
 two:
   name: MyString
   email: user_two@gmail.com
   password_digest: MyString
+  admin: false

@@ -7,6 +7,7 @@ ru:
       home: Главная
       sign_in: Войти
       sign_out: Выйти
+      admin: Админка
       add_bulletin: Добавить
   web:
     bulletins:
@@ -24,3 +25,9 @@ ru:
       sign_out:
         success: Успешно
         failed: Ошибка деаутентификации
+    admin:
+      admin:
+        index:
+          title: Объявления на модерации
+          name: Название
+          created: Дата создания

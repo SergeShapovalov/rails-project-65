@@ -14,7 +14,11 @@
 end
 
 3.times do
-  User.create!(name: Faker::Name.name, email: Faker::Internet.unique.email)
+  User.create!(
+    name: Faker::Name.name,
+    email: Faker::Internet.unique.email,
+    admin: Faker::Boolean.boolean(true_ratio: 0.2)
+  )
 end
 
 users = User.all
