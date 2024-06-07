@@ -9,6 +9,6 @@
               class: class_names(['nav-link', 'link-dark', { active: current_page?(admin_root_path) }]) do
         = t('.all_bulletins')
     li.nav-item
-      = link_to admin_root_path,
-              class: class_names(['nav-link', 'link-dark', { active: current_page?(admin_root_path) }]) do
+      = link_to admin_categories_path,
+              class: class_names(['nav-link', 'link-dark', { active: current_page?(admin_categories_path) }]) do
         = t('.categories')

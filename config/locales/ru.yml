@@ -36,3 +36,23 @@ ru:
           on_moderated: Объявления на модерации
           all_bulletins: Все объявления
           categories: Все категории
+      categories:
+        created_success: Category was successfully created
+        create_failed: Error creating category
+        updated_success: Category was successfully changed
+        update_failed: Error updating category
+        deleted_success: Category was successfully deleted
+        delete_failed: Error deleting category
+        index:
+          title: Категории
+          add_category: Добавить категорию
+          id: ID
+          name: Название
+          actions: Действия
+          edit: Редактировать
+          delete: Удалить
+          confirm_delete: Подтвердить удаление
+        new:
+          title: Новая категория
+        edit:
+          title: Редактировать категорию

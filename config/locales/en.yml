@@ -65,3 +65,23 @@ en:
           on_moderated: Bulletins on moderation
           all_bulletins: All Bulletins
           categories: All Categories
+      categories:
+        created_success: Категория была успешно создана
+        create_failed: Ошибка создания категории
+        updated_success: Категория была успешно изменена
+        update_failed: Ошибка изменения категории
+        deleted_success: Категория была успешно удалена
+        delete_failed: Ошибка удаления категории
+        index:
+          title: Categories
+          add_category: Add Category
+          id: ID
+          name: Name
+          actions: Actions
+          edit: Edit
+          delete: Delete
+          confirm_delete: Confirm Delete
+        new:
+          title: New Category
+        edit:
+          title: Edit category
