@@ -57,6 +57,11 @@ en:
     admin:
       admin:
         index:
-          title: Bulletins on mederation
+          title: Bulletins on moderation
           name: Name
           created: Created date
+      shared:
+        sidebar:
+          on_moderated: Bulletins on moderation
+          all_bulletins: All Bulletins
+          categories: All Categories

@@ -31,3 +31,8 @@ ru:
           title: Объявления на модерации
           name: Название
           created: Дата создания
+      shared:
+        sidebar:
+          on_moderated: Объявления на модерации
+          all_bulletins: Все объявления
+          categories: Все категории
