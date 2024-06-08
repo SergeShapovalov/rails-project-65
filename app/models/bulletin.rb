@@ -11,4 +11,25 @@ class Bulletin < ApplicationRecord
   validates :image, attached: true, content_type: %i[png jpg jpeg], size: { less_than: 5.megabytes }
 
   scope :desc_by_created, -> { order(created_at: :desc) }
+
+  aasm whiny_transitions: false, column: :state do
+    state :draft, initial: true
+    state :under_moderation, :published, :archived, :rejected
+
+    event :moderate do
+      transitions from: %i[draft rejected], to: :under_moderation
+    end
+
+    event :publish do
+      transitions from: :under_moderation, to: :published
+    end
+
+    event :reject do
+      transitions from: :under_moderation, to: :rejected
+    end
+
+    event :archive do
+      transitions from: %i[draft under_moderation published rejected], to: :archived
+    end
+  end
 end
