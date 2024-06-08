@@ -19,6 +19,10 @@ ru:
       create:
         success: Объявление было создано
         failed: Ошибка создания объявления
+      edit:
+        title: Редактировать объявление
+        not_authorized: Доступ закрыт
+        authorize_error: Ошибка авторизации
     auth:
       callback:
         success: Успешно

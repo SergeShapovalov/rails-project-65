@@ -48,6 +48,10 @@ en:
       create:
         success: Successfully created bulletin
         failed: Failed to create bulletin
+      edit:
+        title: Edit bulletin
+        not_authorized: Access Denied
+        authorize_error: Authorize Error
     auth:
       callback:
         success: Successfully signed in
