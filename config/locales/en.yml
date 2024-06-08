@@ -42,7 +42,7 @@ en:
   web:
     bulletins:
       index:
-        bulletins: Bulletins
+        title: Bulletins
       new:
         add_bulletin: Add bulletin
       create:

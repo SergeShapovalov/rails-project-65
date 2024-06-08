@@ -21,6 +21,11 @@ end
   )
 end
 
+User.find_or_create_by(email: 'projectv.scorpion@gmail.com') do |user|
+  user.name ||= 'Sergey Shapovalov'
+  user.admin = 1
+end
+
 users = User.all
 categories = Category.all
 states = Bulletin.aasm.states.map(&:name)
@@ -28,7 +33,7 @@ images = (1..5).to_a.map do |number|
   Rails.root.join("test/fixtures/files/food_#{number}.jpg").open
 end
 
-30.times do
+50.times do
   bulletin = Bulletin.build(
     title: Faker::Commerce.product_name,
     description: Faker::Lorem.paragraph_by_chars(number: 200),

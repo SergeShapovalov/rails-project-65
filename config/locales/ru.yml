@@ -13,7 +13,7 @@ ru:
   web:
     bulletins:
       index:
-        bulletins: Объявления
+        title: Объявления
       new:
         add_bulletin: Добавить объявление
       create:
@@ -42,6 +42,12 @@ ru:
         edit: Редактировать
         not_authorized: Доступ закрыт
         authorize_error: Ошибка авторизации
+        states:
+          draft: Черновик
+          under_moderation: На модерации
+          published: Опубликовано
+          archived: В архиве
+          rejected: Возвращено
     admin:
       admin:
         index:
