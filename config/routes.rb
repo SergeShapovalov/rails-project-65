@@ -10,6 +10,7 @@ Rails.application.routes.draw do
     root 'bulletins#index'
 
     resources :bulletins
+    resource :profile, only: :show
 
     post 'auth/sign_out', to: 'auth#sign_out', as: :sign_out
     post 'auth/:provider', to: 'auth#request', as: :auth_request

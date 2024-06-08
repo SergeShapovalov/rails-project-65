@@ -4,14 +4,14 @@ module AuthConcern
   extend ActiveSupport::Concern
 
   def authorized?
-    auth_user&.present?
+    current_user&.present?
   end
 
   def is_admin?
-    auth_user&.admin?
+    current_user&.admin?
   end
 
-  def auth_user
+  def current_user
     if session[:user_id]
       User.find_by_id(session[:user_id])
     end

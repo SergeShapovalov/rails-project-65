@@ -38,12 +38,11 @@ en:
       sign_out: Sign Out
       admin: Admin
       add_bulletin: Add Bulletin
+      my_bulletins: My Bulletins
   web:
     bulletins:
       index:
         bulletins: Bulletins
-        not_authorized: Access Denied
-        authorize_error: Authorize Error
       new:
         add_bulletin: Add bulletin
       create:
@@ -56,6 +55,18 @@ en:
       sign_out:
         success: Successfully signed out
         failed: Failed to sign out
+    profiles:
+      show:
+        title: My Bulletins
+        add_bulletin: Add Bulletin
+        name: Name
+        state: State
+        created: Created
+        actions: Actions
+        show: Show
+        edit: Edit
+        not_authorized: Access Denied
+        authorize_error: Authorize Error
     admin:
       admin:
         index:

@@ -9,12 +9,11 @@ ru:
       sign_out: Выйти
       admin: Админка
       add_bulletin: Добавить
+      my_bulletins: Мои объявления
   web:
     bulletins:
       index:
         bulletins: Объявления
-        not_authorized: Доступ закрыт
-        authorize_error: Ошибка авторизации
       new:
         add_bulletin: Добавить объявление
       create:
@@ -27,6 +26,18 @@ ru:
       sign_out:
         success: Успешно
         failed: Ошибка деаутентификации
+    profiles:
+      show:
+        title: Мои объявления
+        add_bulletin: Добавить объявление
+        name: Название
+        state: Состояние
+        created: Дата создания
+        actions: Действия
+        show: Показать
+        edit: Редактировать
+        not_authorized: Доступ закрыт
+        authorize_error: Ошибка авторизации
     admin:
       admin:
         index:
