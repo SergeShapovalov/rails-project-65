@@ -4,7 +4,7 @@ ci-setup:
 	cp -n .env.example .env || true
 	yarn install
 	bundle install --without production development
-	RAILS_ENV=test bin/rails db:prepare
+	RAILS_ENV=test bin/rails db:reset
 
 install:
 	cp -n .env.example .env || true
