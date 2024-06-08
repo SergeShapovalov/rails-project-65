@@ -24,6 +24,12 @@ Rails.application.routes.draw do
     namespace :admin do
       root 'admin#index'
       resources :categories
+
+      resources :bulletins, only: :index do
+        member do
+          patch :publish, :reject, :archive
+        end
+      end
     end
   end
 end

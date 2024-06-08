@@ -2,7 +2,7 @@ module Web
   module Admin
     class AdminController < Web::Admin::ApplicationController
       def index
-        @bulletins = Bulletin.all
+        @bulletins = Bulletin.desc_by_created
       end
     end
   end

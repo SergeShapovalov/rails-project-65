@@ -101,6 +101,25 @@ en:
           on_moderated: Bulletins on moderation
           all_bulletins: All Bulletins
           categories: All Categories
+      bulletins:
+        index:
+          title: Bulletins
+          name: Name
+          state: State
+          created: Created
+          actions: Actions
+          show: Show
+          archiving: Archiving
+          confirm_archiving: Confirm Archiving
+          states:
+            draft: Draft
+            under_moderation: Under moderation
+            published: Published
+            archived: Archived
+            rejected: Rejected
+        archive:
+          success: Bulletin has been archived.
+          failed: Error sending to bulletin archive
       categories:
         created_success: Категория была успешно создана
         create_failed: Ошибка создания категории

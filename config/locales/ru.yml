@@ -72,6 +72,25 @@ ru:
           on_moderated: Объявления на модерации
           all_bulletins: Все объявления
           categories: Все категории
+      bulletins:
+        index:
+          title: Объявления
+          name: Название
+          state: Состояние
+          created: Дата создания
+          actions: Действия
+          show: Показать
+          archiving: Архивировать
+          confirm_archiving: Подтвердить архивацию
+          states:
+            draft: Черновик
+            under_moderation: На модерации
+            published: Опубликовано
+            archived: В архиве
+            rejected: Возвращено
+        archive:
+          success: Объявление отправилось в архив
+          failed: Ошибка отправки в объявления в архив
       categories:
         created_success: Category was successfully created
         create_failed: Error creating category
