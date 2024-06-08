@@ -33,3 +33,5 @@
                           data: { turbo_method: 'patch', turbo_confirm: t('.confirm_archiving') },
                           class: 'text-danger' do
                     = t('.archive')
+      .mt-2
+        = paginate @bulletins
