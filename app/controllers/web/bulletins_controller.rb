@@ -5,7 +5,7 @@ module Web
     end
 
     def new
-      @bulletin = current_user.bulletin.build
+      @bulletin = current_user.bulletins.build
     end
 
     def show
@@ -13,7 +13,7 @@ module Web
     end
 
     def create
-      @bulletin = current_user.bulletin.build(bulletin_params)
+      @bulletin = current_user.bulletins.build(bulletin_params)
       @bulletin.user_id = session[:user_id]
 
       if @bulletin.save

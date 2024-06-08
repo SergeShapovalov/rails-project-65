@@ -1,4 +1,6 @@
 class Bulletin < ApplicationRecord
+  include AASM
+
   belongs_to :user
   belongs_to :category
 
