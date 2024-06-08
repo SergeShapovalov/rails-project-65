@@ -3,3 +3,11 @@ ru:
     models:
       bulletin: Объявление
       category: категорию
+  web:
+    bulletins:
+      search:
+        select_category: Выбрать категорию
+        find_by_name: Искать по названию объявления
+  buttons:
+    search: Искать
+    reset: Сброс

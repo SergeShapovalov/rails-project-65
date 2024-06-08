@@ -3,7 +3,9 @@ module Web
     before_action :authorize_user, only: %i[new create edit update moderate archive]
 
     def index
-      @bulletins = Bulletin.published.desc_by_created
+      @query = Bulletin.ransack(params[:q])
+      @bulletins = @query.result.published.desc_by_created.page(params[:page]).per(12)
+      @categories = Category.all
     end
 
     def new

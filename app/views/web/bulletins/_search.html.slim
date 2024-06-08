@@ -1,0 +1,14 @@
+= search_form_for query do |f|
+  .row.my-2
+    .col-5
+      = f.input :title_cont,
+              label: t('.find_by_name'),
+              placeholder: false
+    .col-4
+      = f.input :category_id_eq,
+              as: :select,
+              collection: categories,
+              label: t('.select_category')
+    .col-3.mt-4
+      = f.submit t('buttons.search'), class: 'btn btn-primary me-2'
+      = link_to t('buttons.reset'), url_for, class: 'btn btn-outline-primary'

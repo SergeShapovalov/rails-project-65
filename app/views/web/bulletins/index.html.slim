@@ -3,6 +3,8 @@
     .mb-4
       h2 = t('.title')
       hr
+      .p-3.bg-light
+        == render 'search', query: @query, categories: @categories
       .row.mt-2
         - @bulletins.each do |bulletin|
           .col-3.pt-2
@@ -14,3 +16,5 @@
                     = bulletin.title
                 h6.card-subtitle.mb-2.text-muted
                   == "#{time_ago_in_words bulletin.created_at}"
+      .mt-2
+        = paginate @bulletins
