@@ -1,7 +1,7 @@
 module Web
   class BulletinsController < Web::ApplicationController
     def index
-      @bulletins = Bulletin.desc_by_created.all
+      @bulletins = Bulletin.published.desc_by_created
     end
 
     def new
