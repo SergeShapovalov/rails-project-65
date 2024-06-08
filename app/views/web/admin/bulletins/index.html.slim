@@ -2,6 +2,7 @@
   = render 'web/admin/shared/sidebar'
   .col-md-9
     h1.h2.mb-4 = t('.title')
+    == render 'web/profiles/search', query: @query, url: admin_bulletins_path
     row.mt-2
       table.table.table-borderless
         thead
@@ -28,3 +29,5 @@
                           data: { turbo_method: 'patch', turbo_confirm: t('.confirm_archiving') },
                           class: 'text-danger' do
                     = t('.archiving')
+    .mt-2
+      = paginate @bulletins

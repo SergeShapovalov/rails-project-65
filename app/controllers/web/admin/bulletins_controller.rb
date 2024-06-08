@@ -4,7 +4,8 @@ module Web
   module Admin
     class BulletinsController < Web::Admin::ApplicationController
       def index
-        @bulletins = Bulletin.desc_by_created
+        @query = Bulletin.ransack(params[:q])
+        @bulletins = @query.result.desc_by_created.page(params[:page])
       end
 
       def archive
