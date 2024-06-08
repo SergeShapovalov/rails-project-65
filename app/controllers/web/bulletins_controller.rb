@@ -1,7 +1,7 @@
 module Web
   class BulletinsController < Web::ApplicationController
     def index
-      @bulletins = Bulletin.order(created_at: :desc).all
+      @bulletins = Bulletin.desc_by_created.all
     end
 
     def new
