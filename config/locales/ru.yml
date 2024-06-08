@@ -23,6 +23,15 @@ ru:
         title: Редактировать объявление
         not_authorized: Доступ закрыт
         authorize_error: Ошибка авторизации
+      update:
+        success: Объявление было обновлено
+        failed: Ошибка обновления объявления
+      moderate:
+        success: Объявление отправлено на модерацию
+        failed: Ошибка отправки объявления на модерацию
+      archive:
+        success: Объявление отправилось в архив
+        failed: Ошибка отправки в объявления в архив
     auth:
       callback:
         success: Успешно
@@ -40,6 +49,9 @@ ru:
         actions: Действия
         show: Показать
         edit: Редактировать
+        moderate: На модерацию
+        archive: В архив
+        confirm_archiving: Подтвердить архивацию
         not_authorized: Доступ закрыт
         authorize_error: Ошибка авторизации
         states:

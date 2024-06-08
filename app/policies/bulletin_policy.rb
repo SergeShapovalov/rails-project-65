@@ -17,6 +17,14 @@ class BulletinPolicy < ApplicationPolicy
     edit?
   end
 
+  def moderate?
+    edit?
+  end
+
+  def archive?
+    edit?
+  end
+
   def create?
     new?
   end

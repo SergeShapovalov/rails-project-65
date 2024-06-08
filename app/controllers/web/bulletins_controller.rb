@@ -1,5 +1,7 @@
 module Web
   class BulletinsController < Web::ApplicationController
+    before_action :authorize_user, only: %i[new create edit update moderate archive]
+
     def index
       @bulletins = Bulletin.published.desc_by_created
     end
@@ -35,8 +37,30 @@ module Web
       if @bulletin.update(bulletin_params)
         redirect_to profile_path, notice: t('.success')
       else
-        flash.now[:failure] = t('.failure')
+        flash.now[:failure] = t('.failed')
         render :edit, status: :unprocessable_entity
+      end
+    end
+
+    def moderate
+      @bulletin = Bulletin.find params[:id]
+      authorize @bulletin
+
+      if @bulletin.moderate!
+        redirect_to profile_path, notice: t('.success')
+      else
+        redirect_to profile_path, alert: t('.failed')
+      end
+    end
+
+    def archive
+      @bulletin = Bulletin.find params[:id]
+      authorize @bulletin
+
+      if @bulletin.archive!
+        redirect_to profile_path, notice: t('.success')
+      else
+        redirect_to profile_path, alert: t('.failed')
       end
     end
 

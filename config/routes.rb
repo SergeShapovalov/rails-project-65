@@ -9,7 +9,12 @@ Rails.application.routes.draw do
   scope module: :web do
     root 'bulletins#index'
 
-    resources :bulletins
+    resources :bulletins do
+      member do
+        patch :moderate, :archive
+      end
+    end
+
     resource :profile, only: :show
 
     post 'auth/sign_out', to: 'auth#sign_out', as: :sign_out

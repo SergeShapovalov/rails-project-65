@@ -52,6 +52,15 @@ en:
         title: Edit bulletin
         not_authorized: Access Denied
         authorize_error: Authorize Error
+      update:
+        success: Bulletin has been updated
+        failed: Error updating bulletin
+      moderate:
+        success: Bulletin has been sent for moderation
+        failed: Error sending bulletin for moderation
+      archive:
+        success: Bulletin has been archived.
+        failed: Error sending to bulletin archive
     auth:
       callback:
         success: Successfully signed in
@@ -69,8 +78,17 @@ en:
         actions: Actions
         show: Show
         edit: Edit
+        moderate: Under moderate
+        archive: Archiving
+        confirm_archiving: Confirm archiving
         not_authorized: Access Denied
         authorize_error: Authorize Error
+        states:
+          draft: Draft
+          under_moderation: Under moderation
+          published: Published
+          archived: Archived
+          rejected: Rejected
     admin:
       admin:
         index:
