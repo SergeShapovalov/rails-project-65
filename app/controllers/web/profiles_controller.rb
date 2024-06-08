@@ -3,7 +3,8 @@ module Web
     before_action :authorize_user
 
     def show
-      @bulletins = current_user.bulletins.desc_by_created.all
+      @query = current_user.bulletins.ransack(params[:q])
+      @bulletins = @query.result.desc_by_created.page(params[:page])
     end
   end
 end

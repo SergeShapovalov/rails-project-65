@@ -92,6 +92,9 @@ en:
           published: Published
           archived: Archived
           rejected: Rejected
+      search:
+        by_name: Find by name
+        by_state: Find by state
     admin:
       admin:
         index:

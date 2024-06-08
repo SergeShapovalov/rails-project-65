@@ -5,6 +5,7 @@
       hr
     = link_to new_bulletin_path do
       = t('.add_bulletin')
+    == render 'search', query: @query, url: profile_path
     .row.mt-2
       table.table.table-borderless
         thead
@@ -37,3 +38,5 @@
                           data: { turbo_method: 'patch', turbo_confirm: t('.confirm_archiving') },
                           class: 'text-danger' do
                     = t('.archive')
+    .mt-2
+      = paginate @bulletins

@@ -63,6 +63,9 @@ ru:
           published: Опубликовано
           archived: В архиве
           rejected: Возвращено
+      search:
+        by_name: Искать по названию объявления
+        by_state: По состоянию
     admin:
       admin:
         index:
