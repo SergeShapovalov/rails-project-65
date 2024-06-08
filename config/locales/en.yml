@@ -94,7 +94,14 @@ en:
         index:
           title: Bulletins on moderation
           name: Name
+          actions: Actions
           created: Created date
+          publish: Publish
+          confirm_publish: Confirm Publish
+          reject: Reject
+          confirm_rejecting: Confirm reject
+          archive: Archiving
+          confirm_archiving: Confirm archiving
           access_denied: Access Denied
       shared:
         sidebar:
@@ -120,6 +127,12 @@ en:
         archive:
           success: Bulletin has been archived.
           failed: Error sending to bulletin archive
+        publish:
+          success: Bulletin was successfully published
+          failed: Error posting bulletin
+        reject:
+          success: Bulletin was successfully rejected
+          failed: Error rejecting bulletin
       categories:
         created_success: Категория была успешно создана
         create_failed: Ошибка создания категории

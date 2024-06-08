@@ -65,7 +65,14 @@ ru:
         index:
           title: Объявления на модерации
           name: Название
+          actions: Действия
           created: Дата создания
+          publish: Опубликовать
+          confirm_publish: Подтвердить публикацию
+          reject: Вернуть
+          confirm_rejecting: Подтвердить возврат
+          archive: В архив
+          confirm_archiving: Подтвердить архивацию
           access_denied: Доступ закрыт
       shared:
         sidebar:
@@ -91,6 +98,12 @@ ru:
         archive:
           success: Объявление отправилось в архив
           failed: Ошибка отправки в объявления в архив
+        publish:
+          success: Объявление было успешно опубликовано
+          failed: Ошибка публикации объявления
+        reject:
+          success: Объявление было успешно возвращено
+          failed: Ошибка возврата объявления
       categories:
         created_success: Category was successfully created
         create_failed: Error creating category
