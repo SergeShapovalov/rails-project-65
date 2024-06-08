@@ -13,6 +13,8 @@ ru:
     bulletins:
       index:
         bulletins: Объявления
+        not_authorized: Доступ закрыт
+        authorize_error: Ошибка авторизации
       new:
         add_bulletin: Добавить объявление
       create:
@@ -31,6 +33,7 @@ ru:
           title: Объявления на модерации
           name: Название
           created: Дата создания
+          access_denied: Доступ закрыт
       shared:
         sidebar:
           on_moderated: Объявления на модерации

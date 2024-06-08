@@ -42,6 +42,8 @@ en:
     bulletins:
       index:
         bulletins: Bulletins
+        not_authorized: Access Denied
+        authorize_error: Authorize Error
       new:
         add_bulletin: Add bulletin
       create:
@@ -60,6 +62,7 @@ en:
           title: Bulletins on moderation
           name: Name
           created: Created date
+          access_denied: Access Denied
       shared:
         sidebar:
           on_moderated: Bulletins on moderation

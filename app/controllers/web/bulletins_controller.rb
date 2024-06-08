@@ -1,11 +1,11 @@
 module Web
-  class BulletinsController < ApplicationController
+  class BulletinsController < Web::ApplicationController
     def index
       @bulletins = Bulletin.order(created_at: :desc).all
     end
 
     def new
-      @bulletin = Bulletin.new
+      @bulletin = auth_user.bullentins.build
     end
 
     def show
@@ -13,7 +13,7 @@ module Web
     end
 
     def create
-      @bulletin = Bulletin.build(bulletin_params)
+      @bulletin = auth_user.bullentins.build(bulletin_params)
       @bulletin.user_id = session[:user_id]
 
       if @bulletin.save

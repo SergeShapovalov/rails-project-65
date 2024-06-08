@@ -1,5 +1,5 @@
 module Web
-  class AuthController < ApplicationController
+  class AuthController < Web::ApplicationController
     def callback
       auth_hash = request.env['omniauth.auth']
       user_info = auth_hash['info']
@@ -15,18 +15,6 @@ module Web
       end
 
       redirect_to root_path
-    end
-
-    def sign_out()
-      session.delete(:user_id)
-      session.clear
-      redirect_to root_path, notice: t('.success')
-    end
-
-    private
-
-    def sign_in(user_id)
-      session['user_id'] = user_id
     end
   end
 end

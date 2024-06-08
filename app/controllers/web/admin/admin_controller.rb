@@ -1,6 +1,6 @@
 module Web
   module Admin
-    class AdminController < ApplicationController
+    class AdminController < Web::Admin::ApplicationController
       def index
         @bulletins = Bulletin.all
       end

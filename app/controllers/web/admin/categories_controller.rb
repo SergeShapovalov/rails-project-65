@@ -2,7 +2,7 @@
 
 module Web
   module Admin
-    class CategoriesController < ApplicationController
+    class CategoriesController < Web::Admin::ApplicationController
       def index
         @categories = Category.all
       end
