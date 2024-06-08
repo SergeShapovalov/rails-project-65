@@ -32,6 +32,9 @@ ru:
       archive:
         success: Объявление отправилось в архив
         failed: Ошибка отправки в объявления в архив
+      search:
+        select_category: Выбрать категорию
+        find_by_name: Искать по названию объявления
     auth:
       callback:
         success: Успешно
@@ -124,3 +127,13 @@ ru:
           title: Новая категория
         edit:
           title: Редактировать категорию
+  buttons:
+    search: Искать
+    reset: Сброс
+  views:
+    pagination:
+      first: '<<'
+      truncate: '...'
+      last: '>>'
+      next: '>'
+      previous: '<'

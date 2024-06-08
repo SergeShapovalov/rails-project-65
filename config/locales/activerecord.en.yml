@@ -3,11 +3,3 @@ en:
     models:
       bulletin: Bulletin
       category: Category
-  web:
-    bulletins:
-      search:
-        select_category: Select Category
-        find_by_name: Find by name
-  buttons:
-    search: Search
-    reset: Reset
