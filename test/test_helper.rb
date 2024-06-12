@@ -17,7 +17,7 @@ module ActiveSupport
 end
 
 class ActionDispatch::IntegrationTest
-  def sign_in(user, options = {})
+  def sign_in(user)
     auth_hash = {
       provider: 'github',
       uid: '12345',
