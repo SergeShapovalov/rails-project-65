@@ -12,12 +12,12 @@ module AuthConcern
   end
 
   def current_user
-    if session[:user_id]
-      User.find_by_id(session[:user_id])
-    end
+    return unless session[:user_id]
+
+    User.find_by_id(session[:user_id])
   end
 
-  def sign_out()
+  def sign_out
     session.delete(:user_id)
     session.clear
     redirect_to root_path, notice: t('.success')

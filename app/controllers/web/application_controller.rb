@@ -6,9 +6,9 @@ module Web
     rescue_from Pundit::NotAuthorizedError, with: :authorize_error
 
     def authorize_user
-      unless authorized?
-        redirect_to root_path, alert: t('.not_authorized')
-      end
+      return if authorized?
+
+      redirect_to root_path, alert: t('.not_authorized')
     end
 
     def authorize_error
@@ -16,9 +16,9 @@ module Web
     end
 
     def authorize_admin
-      unless is_admin?
-        redirect_to root_path, alert: t('.access_denied')
-      end
+      return if is_admin?
+
+      redirect_to root_path, alert: t('.access_denied')
     end
   end
 end

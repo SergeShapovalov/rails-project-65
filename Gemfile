@@ -35,20 +35,19 @@ gem 'jbuilder'
 # Use Kredis to get higher-level data types in Redis [https://github.com/rails/kredis]
 # gem 'kredis'
 
-
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
-gem 'tzinfo-data', platforms: %i[ windows jruby ]
+gem 'tzinfo-data', platforms: %i[windows jruby]
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', require: false
 
 gem 'rails-i18n'
 
+gem 'flash_rails_messages'
 gem 'simple_form'
 gem 'slim'
-gem 'slim-rails'
 gem 'slim_lint'
-gem 'flash_rails_messages'
+gem 'slim-rails'
 
 gem 'faker'
 
@@ -64,14 +63,14 @@ gem 'image_processing', '~> 1.2'
 
 gem 'aasm'
 
-gem 'ransack'
 gem 'kaminari'
+gem 'ransack'
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
-  gem 'debug', platforms: %i[ mri windows ]
-  gem 'rubocop', require: false
+  gem 'debug', platforms: %i[mri windows]
   gem 'dotenv-rails'
+  gem 'rubocop', require: false
 end
 
 group :development do
