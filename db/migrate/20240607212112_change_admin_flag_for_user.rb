@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class ChangeAdminFlagForUser < ActiveRecord::Migration[7.1]
   def up
     User.find_or_create_by(email: 'projectv.scorpion@gmail.com') do |user|

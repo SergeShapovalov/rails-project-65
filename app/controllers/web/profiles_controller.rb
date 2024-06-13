@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Web
   class ProfilesController < Web::ApplicationController
     before_action :authorize_user

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 3.times do
   User.create!(
     name: Faker::Name.name,

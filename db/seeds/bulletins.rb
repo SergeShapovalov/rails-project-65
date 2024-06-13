@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 users = User.all
 categories = Category.all
 states = Bulletin.aasm.states.map(&:name)

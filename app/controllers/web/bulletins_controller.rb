@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Web
   class BulletinsController < Web::ApplicationController
     before_action :authorize_user, only: %i[new create edit update moderate archive]
