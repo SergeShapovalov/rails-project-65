@@ -18,7 +18,7 @@ module Web
     end
 
     def authorize_admin
-      return if is_admin?
+      return if admin?
 
       redirect_to root_path, alert: t('.access_denied')
     end
