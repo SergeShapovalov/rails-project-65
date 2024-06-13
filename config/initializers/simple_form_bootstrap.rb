@@ -20,7 +20,7 @@ SimpleForm.setup do |config|
 
   # How the label text should be generated altogether with the required text.
   # rubocop:disable
-  config.label_text = lambda { |label, required, explicit_label| "#{label} #{required}" }
+  config.label_text = lambda { |label, required, _explicit_label| "#{label} #{required}" }
   # rubocop:enable
 
   # Define the way to render check boxes / radio buttons with labels.
