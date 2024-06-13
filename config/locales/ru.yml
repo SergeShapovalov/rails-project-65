@@ -18,14 +18,12 @@ ru:
         add_bulletin: Добавить объявление
       create:
         success: Объявление было создано
-        failed: Ошибка создания объявления
       edit:
         title: Редактировать объявление
         not_authorized: Доступ закрыт
         authorize_error: Ошибка авторизации
       update:
         success: Объявление было обновлено
-        failed: Ошибка обновления объявления
       moderate:
         success: Объявление отправлено на модерацию
         failed: Ошибка отправки объявления на модерацию
@@ -35,6 +33,9 @@ ru:
       search:
         select_category: Выбрать категорию
         find_by_name: Искать по названию объявления
+      form:
+        empty_category: Категория должна быть выбрана
+        empty_image: Фотография должна быть загружена
     auth:
       callback:
         success: Успешно

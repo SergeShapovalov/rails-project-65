@@ -3,3 +3,7 @@ ru:
     models:
       bulletin: Объявление
       category: категорию
+    attributes:
+      bulletin:
+        title: Заголовок
+        description: Описание

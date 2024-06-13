@@ -6,9 +6,11 @@
   = f.association :category,
           collection: Category.all,
           required: true,
-          input_html: { class: 'input-group mb-3 form-control' }
+          input_html: { class: 'input-group mb-3 form-control' },
+          error: t('.empty_category')
   = f.input :image,
           required: true,
-          input_html: { class: 'input-group mb-3 form-control' }
+          input_html: { class: 'input-group mb-3 form-control' },
+          error: t('.empty_image')
   = f.button :submit,
           class: 'btn-primary flex-grow-2 me-2'

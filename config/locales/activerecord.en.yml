@@ -3,3 +3,7 @@ en:
     models:
       bulletin: Bulletin
       category: Category
+    attributes:
+      bulletin:
+        title: Title
+        description: Description
