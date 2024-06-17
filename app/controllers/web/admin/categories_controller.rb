@@ -3,6 +3,8 @@
 module Web
   module Admin
     class CategoriesController < Web::Admin::ApplicationController
+      before_action :get_category, only: %i[edit update destroy]
+
       def index
         @categories = Category.all
       end
@@ -11,9 +13,7 @@ module Web
         @category = Category.new
       end
 
-      def edit
-        @category = Category.find(params[:id])
-      end
+      def edit; end
 
       def create
         @category = Category.new(category_params)
@@ -27,8 +27,6 @@ module Web
       end
 
       def update
-        @category = Category.find(params[:id])
-
         if @category.update(category_params)
           redirect_to admin_categories_path, notice: t('.updated_success')
         else
@@ -38,10 +36,14 @@ module Web
       end
 
       def destroy
-        if Category.find(params[:id]).destroy!
-          redirect_to admin_categories_url, notice: t('.deleted_success')
+        if @category.bulletins.exists?
+          redirect_to admin_categories_path, alert: t('.has_bulletins')
         else
-          flash[:alert] = t('.delete_failed')
+          if @category.destroy!
+            redirect_to admin_categories_path, notice: t('.success')
+          else
+            flash[:alert] = t('.delete_failed')
+          end
         end
       end
 
@@ -49,6 +51,10 @@ module Web
 
       def category_params
         params.require(:category).permit(:name)
+      end
+
+      def get_category
+        @category = Category.find(params[:id])
       end
     end
   end

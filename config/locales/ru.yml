@@ -112,12 +112,12 @@ ru:
           success: Объявление было успешно возвращено
           failed: Ошибка возврата объявления
       categories:
-        created_success: Category was successfully created
-        create_failed: Error creating category
-        updated_success: Category was successfully changed
-        update_failed: Error updating category
-        deleted_success: Category was successfully deleted
-        delete_failed: Error deleting category
+        created_success: Категория была успешно создана
+        create_failed: Ошибка создания категории
+        updated_success: Категория была успешно изменена
+        update_failed: Ошибка изменения категории
+        deleted_success: Категория была успешно удалена
+        delete_failed: Ошибка удаления категории
         index:
           title: Категории
           add_category: Добавить категорию
@@ -131,6 +131,8 @@ ru:
           title: Новая категория
         edit:
           title: Редактировать категорию
+        destroy:
+          has_bulletins: Не удалось удалить категорию, так как она содержит объявления
   buttons:
     search: Искать
     reset: Сброс

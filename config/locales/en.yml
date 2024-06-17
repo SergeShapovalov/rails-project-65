@@ -141,12 +141,12 @@ en:
           success: Bulletin was successfully rejected
           failed: Error rejecting bulletin
       categories:
-        created_success: Категория была успешно создана
-        create_failed: Ошибка создания категории
-        updated_success: Категория была успешно изменена
-        update_failed: Ошибка изменения категории
-        deleted_success: Категория была успешно удалена
-        delete_failed: Ошибка удаления категории
+        created_success: Category was successfully created
+        create_failed: Error creating category
+        updated_success: Category was successfully changed
+        update_failed: Error updating category
+        deleted_success: Category was successfully deleted
+        delete_failed: Error deleting category
         index:
           title: Categories
           add_category: Add Category
@@ -160,6 +160,8 @@ en:
           title: New Category
         edit:
           title: Edit category
+        destroy:
+          has_bulletins: The category could not be deleted because it contains ads
   buttons:
     search: Search
     reset: Reset
