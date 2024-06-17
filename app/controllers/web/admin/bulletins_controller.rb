@@ -3,7 +3,7 @@
 module Web
   module Admin
     class BulletinsController < Web::Admin::ApplicationController
-      before_action :get_bulletin, only: %i[archive publish reject]
+      before_action :find_bulletin, only: %i[archive publish reject]
 
       def index
         @query = Bulletin.ransack(params[:q])
@@ -39,7 +39,7 @@ module Web
 
       private
 
-      def get_bulletin
+      def find_bulletin
         @bulletin = Bulletin.find(params[:id])
       end
     end

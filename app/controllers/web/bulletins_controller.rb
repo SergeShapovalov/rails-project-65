@@ -3,7 +3,7 @@
 module Web
   class BulletinsController < Web::ApplicationController
     before_action :authorize_user, only: %i[new create edit update moderate archive]
-    before_action :get_bulletin, only: %i[show edit update moderate archive]
+    before_action :find_bulletin, only: %i[show edit update moderate archive]
     before_action :authorize_bulletin, only: %i[edit update moderate archive]
 
     def index
@@ -63,7 +63,7 @@ module Web
       params.require(:bulletin).permit(:title, :description, :category_id, :image)
     end
 
-    def get_bulletin
+    def find_bulletin
       @bulletin = Bulletin.find(params[:id])
     end
 
