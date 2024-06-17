@@ -2,7 +2,7 @@
 
 class BulletinPolicy < ApplicationPolicy
   def show?
-    true
+    record.published? || edit? || admin?
   end
 
   def new?
