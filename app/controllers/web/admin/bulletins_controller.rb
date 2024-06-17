@@ -11,7 +11,8 @@ module Web
       end
 
       def archive
-        if @bulletin.archive!
+        if @bulletin.may_archive?
+          @bulletin.archive!
           redirect_back_or_to admin_bulletins_path, notice: t('.success')
         else
           redirect_back_or_to admin_bulletins_path, alert: t('.failed')
@@ -19,7 +20,8 @@ module Web
       end
 
       def publish
-        if @bulletin.publish!
+        if @bulletin.may_publish?
+          @bulletin.publish!
           redirect_to admin_root_path, notice: t('.success')
         else
           redirect_to admin_root_path, alert: t('.failed')
@@ -27,7 +29,8 @@ module Web
       end
 
       def reject
-        if @bulletin.reject!
+        if @bulletin.may_reject?
+          @bulletin.reject!
           redirect_to admin_root_path, notice: t('.success')
         else
           redirect_to admin_root_path, alert: t('.failed')
