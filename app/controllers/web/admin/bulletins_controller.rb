@@ -40,7 +40,7 @@ module Web
       private
 
       def get_bulletin
-        @bulletin = Bulletin.find params[:id]
+        @bulletin = Bulletin.find(params[:id])
       end
     end
   end

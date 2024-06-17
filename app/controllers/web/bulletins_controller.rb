@@ -64,11 +64,11 @@ module Web
     end
 
     def get_bulletin
-      @bulletin = Bulletin.find params[:id]
+      @bulletin = Bulletin.find(params[:id])
     end
 
     def authorize_bulletin
-      authorize @bulletin
+      authorize(@bulletin)
     end
   end
 end
