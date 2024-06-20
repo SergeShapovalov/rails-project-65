@@ -20,3 +20,10 @@ three:
   user: one
   category: one
   state: under_moderation
+
+four:
+  title: MyString
+  description: MyText
+  user: two
+  category: two
+  state: draft
