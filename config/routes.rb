@@ -24,7 +24,7 @@ Rails.application.routes.draw do
     get 'auth/:provider/callback', to: 'auth#callback', as: :callback_auth
 
     namespace :admin do
-      root 'admin#index'
+      root 'home#index'
       resources :categories
 
       resources :bulletins, only: :index do
