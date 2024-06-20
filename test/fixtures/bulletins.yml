@@ -13,3 +13,10 @@ two:
   user: two
   category: two
   state: published
+
+three:
+  title: MyString
+  description: MyText
+  user: one
+  category: one
+  state: under_moderation

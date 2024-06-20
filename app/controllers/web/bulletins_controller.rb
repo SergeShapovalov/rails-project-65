@@ -4,7 +4,7 @@ module Web
   class BulletinsController < Web::ApplicationController
     before_action :authorize_user, only: %i[new create edit update moderate archive]
     before_action :find_bulletin, only: %i[show edit update moderate archive]
-    before_action :authorize_bulletin, only: %i[edit update moderate archive]
+    before_action :authorize_bulletin, only: %i[show edit update moderate archive]
 
     def index
       @query = Bulletin.ransack(params[:q])

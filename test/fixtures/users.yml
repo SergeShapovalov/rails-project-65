@@ -3,9 +3,14 @@
 one:
   name: MyString
   email: user_one@gmail.com
-  admin: true
+  admin: false
 
 two:
   name: MyString
   email: user_two@gmail.com
   admin: false
+
+admin:
+  name: MyString
+  email: admin@gmail.com
+  admin: true
