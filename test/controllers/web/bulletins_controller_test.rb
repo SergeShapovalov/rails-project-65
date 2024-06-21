@@ -8,7 +8,6 @@ class Web::BulletinsControllerTest < ActionDispatch::IntegrationTest
     @another_user_bulletin = bulletins(:four)
     @user = users(:one)
     @category = categories(:one)
-
     image_path = Rails.root.join('test/fixtures/files/food_1.jpg')
     @image = Rack::Test::UploadedFile.new(image_path, 'image/jpeg')
   end
@@ -48,7 +47,6 @@ class Web::BulletinsControllerTest < ActionDispatch::IntegrationTest
 
   test 'should create bulletin' do
     sign_in @user
-
     title = Faker::Lorem.sentence(word_count: 3)
     description = Faker::Lorem.paragraph
     category_id = @category.id
@@ -74,7 +72,6 @@ class Web::BulletinsControllerTest < ActionDispatch::IntegrationTest
 
   test 'should update bulletin' do
     sign_in @user
-
     title = Faker::Lorem.sentence(word_count: 3)
     description = @bulletin.description
     category_id = @bulletin.category_id
@@ -96,20 +93,23 @@ class Web::BulletinsControllerTest < ActionDispatch::IntegrationTest
 
   test 'should archive bulletin' do
     sign_in @user
+    bulletin = bulletins(:three)
 
-    patch archive_bulletin_url(@bulletin)
-    @bulletin.reload
+    puts bulletin.inspect
+
+    patch archive_bulletin_url(bulletin)
+    bulletin.reload
+
+    puts bulletin.inspect
 
     assert_redirected_to profile_path
-    assert @bulletin.archived?
+    assert bulletin.archived?
   end
 
   test 'should not archive another user bulletin' do
     sign_in(@user)
-
     patch archive_bulletin_url(@another_user_bulletin)
     @another_user_bulletin.reload
-
     assert_redirected_to root_url
     assert @another_user_bulletin.draft?
   end
@@ -117,8 +117,13 @@ class Web::BulletinsControllerTest < ActionDispatch::IntegrationTest
   test 'should moderate bulletin' do
     sign_in @user
 
+    puts @bulletin.inspect
+
     patch moderate_bulletin_url(@bulletin)
     @bulletin.reload
+
+    puts @bulletin.inspect
+
 
     assert_redirected_to profile_path
     assert @bulletin.under_moderation?
@@ -126,10 +131,8 @@ class Web::BulletinsControllerTest < ActionDispatch::IntegrationTest
 
   test 'should not moderate another user bulletin' do
     sign_in(@user)
-
     patch moderate_bulletin_url(@another_user_bulletin)
     @another_user_bulletin.reload
-
     assert_redirected_to root_url
     assert @another_user_bulletin.draft?
   end
