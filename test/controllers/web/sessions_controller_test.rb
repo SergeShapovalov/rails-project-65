@@ -8,7 +8,7 @@ class Web::SessionsControllerTest < ActionDispatch::IntegrationTest
     assert signed_in?
 
     post sign_out_url
-    assert !signed_in?
+    assert_not signed_in?
     assert_response :redirect
   end
 end
