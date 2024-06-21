@@ -50,14 +50,12 @@ class Web::BulletinsControllerTest < ActionDispatch::IntegrationTest
   test 'should create bulletin' do
     sign_in @user
     title = Faker::Lorem.sentence(word_count: 3)
-    description = Faker::Lorem.paragraph
-    category_id = @category.id
     post bulletins_url,
          params: {
            bulletin: {
              title:,
-             description:,
-             category_id:,
+             description: Faker::Lorem.paragraph,
+             category_id: @category.id,
              image: @image
            }
          }
@@ -73,16 +71,13 @@ class Web::BulletinsControllerTest < ActionDispatch::IntegrationTest
   test 'should update bulletin' do
     sign_in @user
     title = Faker::Lorem.sentence(word_count: 3)
-    description = @bulletin.description
-    category_id = @bulletin.category_id
-    user_id = @bulletin.user_id
     patch bulletin_url(@bulletin),
           params: {
             bulletin: {
               title:,
-              description:,
-              category_id:,
-              user_id:,
+              description: @bulletin.description,
+              category_id: @bulletin.category_id,
+              user_id: @bulletin.user_id,
               image: @image
             }
           }
