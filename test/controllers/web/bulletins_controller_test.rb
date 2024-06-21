@@ -5,7 +5,9 @@ require 'test_helper'
 class Web::BulletinsControllerTest < ActionDispatch::IntegrationTest
   setup do
     @bulletin = bulletins(:one)
+    @bulletin.image.attach(io: Rails.root.join('test/fixtures/files/food_1.jpg').open, filename: 'filename.jpg')
     @another_user_bulletin = bulletins(:four)
+    @another_user_bulletin.image.attach(io: Rails.root.join('test/fixtures/files/food_1.jpg').open, filename: 'filename.jpg')
     @user = users(:one)
     @category = categories(:one)
     image_path = Rails.root.join('test/fixtures/files/food_1.jpg')
@@ -59,7 +61,6 @@ class Web::BulletinsControllerTest < ActionDispatch::IntegrationTest
              image: @image
            }
          }
-
     assert Bulletin.find_by(title:)
   end
 
@@ -85,7 +86,6 @@ class Web::BulletinsControllerTest < ActionDispatch::IntegrationTest
               image: @image
             }
           }
-
     assert Bulletin.find_by(title:)
   end
 
@@ -94,35 +94,28 @@ class Web::BulletinsControllerTest < ActionDispatch::IntegrationTest
     bulletin = bulletins(:three)
     bulletin.image.attach(io: Rails.root.join('test/fixtures/files/food_1.jpg').open, filename: 'filename.jpg')
     patch archive_bulletin_url(bulletin)
-    bulletin.reload
     assert_redirected_to profile_path
-    assert bulletin.archived?
+    assert bulletin.reload.archived?
   end
 
   test 'should not archive another user bulletin' do
     sign_in(@user)
-    @another_user_bulletin.image.attach(io: Rails.root.join('test/fixtures/files/food_1.jpg').open, filename: 'filename.jpg')
     patch archive_bulletin_url(@another_user_bulletin)
-    @another_user_bulletin.reload
     assert_redirected_to root_url
-    assert @another_user_bulletin.draft?
+    assert @another_user_bulletin.reload.draft?
   end
 
   test 'should moderate bulletin' do
     sign_in @user
-    @bulletin.image.attach(io: Rails.root.join('test/fixtures/files/food_1.jpg').open, filename: 'filename.jpg')
     patch moderate_bulletin_url(@bulletin)
-    @bulletin.reload
     assert_redirected_to profile_path
-    assert @bulletin.under_moderation?
+    assert @bulletin.reload.under_moderation?
   end
 
   test 'should not moderate another user bulletin' do
     sign_in(@user)
-    @another_user_bulletin.image.attach(io: Rails.root.join('test/fixtures/files/food_1.jpg').open, filename: 'filename.jpg')
     patch moderate_bulletin_url(@another_user_bulletin)
-    @another_user_bulletin.reload
     assert_redirected_to root_url
-    assert @another_user_bulletin.draft?
+    assert @another_user_bulletin.reload.draft?
   end
 end
