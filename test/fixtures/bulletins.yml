@@ -19,7 +19,7 @@ three:
   description: MyText
   user: one
   category: one
-  state: under_moderation
+  state: published
 
 four:
   title: MyString

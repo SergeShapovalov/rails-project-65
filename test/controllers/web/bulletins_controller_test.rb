@@ -101,7 +101,7 @@ class Web::BulletinsControllerTest < ActionDispatch::IntegrationTest
     @bulletin.reload
 
     assert_redirected_to profile_path
-    assert Bulletin.find(@bulletin.id).archived?
+    assert @bulletin.archived?
   end
 
   test 'should not archive another user bulletin' do
@@ -111,7 +111,7 @@ class Web::BulletinsControllerTest < ActionDispatch::IntegrationTest
     @another_user_bulletin.reload
 
     assert_redirected_to root_url
-    assert Bulletin.find(@another_user_bulletin.id).draft?
+    assert @another_user_bulletin.draft?
   end
 
   test 'should moderate bulletin' do
@@ -121,7 +121,7 @@ class Web::BulletinsControllerTest < ActionDispatch::IntegrationTest
     @bulletin.reload
 
     assert_redirected_to profile_path
-    assert Bulletin.find(@bulletin.id).under_moderation?
+    assert @bulletin.under_moderation?
   end
 
   test 'should not moderate another user bulletin' do
@@ -131,6 +131,6 @@ class Web::BulletinsControllerTest < ActionDispatch::IntegrationTest
     @another_user_bulletin.reload
 
     assert_redirected_to root_url
-    assert Bulletin.find(@another_user_bulletin.id).draft?
+    assert @another_user_bulletin.draft?
   end
 end
