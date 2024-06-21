@@ -50,7 +50,6 @@ class Web::BulletinsControllerTest < ActionDispatch::IntegrationTest
     title = Faker::Lorem.sentence(word_count: 3)
     description = Faker::Lorem.paragraph
     category_id = @category.id
-
     post bulletins_url,
          params: {
            bulletin: {
@@ -76,7 +75,6 @@ class Web::BulletinsControllerTest < ActionDispatch::IntegrationTest
     description = @bulletin.description
     category_id = @bulletin.category_id
     user_id = @bulletin.user_id
-
     patch bulletin_url(@bulletin),
           params: {
             bulletin: {
@@ -94,6 +92,7 @@ class Web::BulletinsControllerTest < ActionDispatch::IntegrationTest
   test 'should archive bulletin' do
     sign_in @user
     bulletin = bulletins(:three)
+    bulletin.image.attach(io: Rails.root.join('test/fixtures/files/food_1.jpg').open, filename: 'filename.jpg')
     patch archive_bulletin_url(bulletin)
     bulletin.reload
     assert_redirected_to profile_path
@@ -102,6 +101,7 @@ class Web::BulletinsControllerTest < ActionDispatch::IntegrationTest
 
   test 'should not archive another user bulletin' do
     sign_in(@user)
+    @another_user_bulletin.image.attach(io: Rails.root.join('test/fixtures/files/food_1.jpg').open, filename: 'filename.jpg')
     patch archive_bulletin_url(@another_user_bulletin)
     @another_user_bulletin.reload
     assert_redirected_to root_url
@@ -110,6 +110,7 @@ class Web::BulletinsControllerTest < ActionDispatch::IntegrationTest
 
   test 'should moderate bulletin' do
     sign_in @user
+    @bulletin.image.attach(io: Rails.root.join('test/fixtures/files/food_1.jpg').open, filename: 'filename.jpg')
     patch moderate_bulletin_url(@bulletin)
     @bulletin.reload
     assert_redirected_to profile_path
@@ -118,6 +119,7 @@ class Web::BulletinsControllerTest < ActionDispatch::IntegrationTest
 
   test 'should not moderate another user bulletin' do
     sign_in(@user)
+    @another_user_bulletin.image.attach(io: Rails.root.join('test/fixtures/files/food_1.jpg').open, filename: 'filename.jpg')
     patch moderate_bulletin_url(@another_user_bulletin)
     @another_user_bulletin.reload
     assert_redirected_to root_url
