@@ -27,3 +27,10 @@ four:
   user: two
   category: two
   state: draft
+
+five:
+  title: <%= Faker::Lorem.paragraph_by_chars(number:40) %>
+  description: <%= Faker::Lorem.paragraph_by_chars(number:500) %>
+  user: one
+  category: one
+  state: under_moderation
