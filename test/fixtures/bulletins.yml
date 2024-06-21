@@ -1,29 +1,29 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  title: MyString
-  description: MyText
+  title: <%= Faker::Lorem.paragraph_by_chars(number:40) %>
+  description: <%= Faker::Lorem.paragraph_by_chars(number:500) %>
   user: one
   category: one
   state: draft
 
 two:
-  title: MyString
-  description: MyText
+  title: <%= Faker::Lorem.paragraph_by_chars(number:40) %>
+  description: <%= Faker::Lorem.paragraph_by_chars(number:500) %>
   user: two
   category: two
   state: published
 
 three:
-  title: MyString
-  description: MyText
+  title: <%= Faker::Lorem.paragraph_by_chars(number:40) %>
+  description: <%= Faker::Lorem.paragraph_by_chars(number:500) %>
   user: one
   category: one
   state: published
 
 four:
-  title: MyString
-  description: MyText
+  title: <%= Faker::Lorem.paragraph_by_chars(number:40) %>
+  description: <%= Faker::Lorem.paragraph_by_chars(number:500) %>
   user: two
   category: two
   state: draft

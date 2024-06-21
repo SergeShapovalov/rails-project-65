@@ -94,14 +94,8 @@ class Web::BulletinsControllerTest < ActionDispatch::IntegrationTest
   test 'should archive bulletin' do
     sign_in @user
     bulletin = bulletins(:three)
-
-    puts bulletin.inspect
-
     patch archive_bulletin_url(bulletin)
     bulletin.reload
-
-    puts bulletin.inspect
-
     assert_redirected_to profile_path
     assert bulletin.archived?
   end
@@ -116,15 +110,8 @@ class Web::BulletinsControllerTest < ActionDispatch::IntegrationTest
 
   test 'should moderate bulletin' do
     sign_in @user
-
-    puts @bulletin.inspect
-
     patch moderate_bulletin_url(@bulletin)
     @bulletin.reload
-
-    puts @bulletin.inspect
-
-
     assert_redirected_to profile_path
     assert @bulletin.under_moderation?
   end
